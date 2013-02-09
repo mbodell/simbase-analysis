@@ -1,4 +1,5 @@
 # Given a year (and optional league info for the year) return a dataframe of players, positions, ages, status
+# Note this will only work for year 10 and above
 GetLeaguePlayers <- function(year, league.info = NULL) {
   # Get the league info, if needed
   if(is.null(league.info)) {
