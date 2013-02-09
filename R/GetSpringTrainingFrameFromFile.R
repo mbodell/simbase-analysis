@@ -24,7 +24,7 @@ GetSpringTrainingFrameFromFile <- function(x) {
   hitters$H <- hitters$BB.H - hitters$BB
   hitters$AB <- hitters$PA - hitters$BB
   hitters$TB <- round(hitters$AB * hitters$SLG,0)
-  hitters$TB.H <- hitters$TB / max(hitters$H,1)
+  hitters$TB.H <- hitters$TB / hitters$H
 
   # Fix the pitchers to be proper table values
   pitch.skills <- c("LO", "AV", "HI")
