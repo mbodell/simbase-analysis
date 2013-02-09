@@ -1,2 +1,4 @@
 # Don't upload the private data
 private_data/
+.RData
+.Rhistory
