@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/mbodell/simbase-analysis/issues"
   },
-  "homepage": "https://github.com/mbodell/simbase-analysis#readme"
+  "homepage": "https://github.com/mbodell/simbase-analysis#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
