@@ -2,3 +2,7 @@
 private_data/
 .RData
 .Rhistory
+
+# vim files
+*~
+*.swp
