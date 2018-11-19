@@ -6,3 +6,4 @@ private_data/
 # vim files
 *~
 *.swp
+*.swo
