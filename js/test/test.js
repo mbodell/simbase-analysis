@@ -4,6 +4,7 @@ const fd = require('../app/fetchData');
 const pd = require('../app/parseData');
 
 var err = function(error, results) {
+  console.log(error);
   console.log(results);
 };
 
@@ -231,14 +232,25 @@ var simbaseIndexPage = `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitiona
 
 // And tests for a group of tests on parsing data
 describe('Data Parsing', function() {
-  describe('test parsing simbase main page', function() {
+  describe('tests parsing simbase main index page', function() {
     it('Able to parse the most recent year as string', async function() {
-      let doc = await pd.parseIndexPage(simbaseIndexPage, err);
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
       assert.equal('Year 82', doc.currentYear);
     });
+
     it('Able to parse the most recent year as number', async function() {
-      let doc = await pd.parseIndexPage(simbaseIndexPage, err);
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
       assert.equal(82, doc.currentYearNum);
+    });
+
+    it('Able to parse the 18 team history links', async function() {
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
+      assert.equal(18, doc.teamHistoryLinks.length);
+    });
+
+    it('Able to parse the team history links and first one is right', async function() {
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
+      assert.equal('avangard_history.html', doc.teamHistoryLinks[0]);
     });
   });
 });
