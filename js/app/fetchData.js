@@ -11,6 +11,7 @@ fetchData.getPage = async function(uri, parse, err) {
     if(err !== undefined) {
       return err(error);
     }
+    return -1;
   }
   return 0;
 }

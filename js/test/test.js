@@ -14,6 +14,17 @@ describe('Data Loading', function() {
     it('Able to load the data, no parsing, so return 0', async function() {
       assert.equal(0, await fd.getPage('http://www.simbase.org/'));
     });
+    it('test passing in parse function that always returns 1', async function() {
+      assert.equal(1, await fd.getPage('http://www.simbase.org/', function() {return 1;}));
+    });
+  });
+  describe('test failing to load things', function() {
+    it('A failure to load with no error function returns -1', async function() {
+      assert.equal(-1, await fd.getPage('https://httpstat.us/403', function() {return 1;}));
+    });
+    it('A failure to load with error function returns -2', async function() {
+      assert.equal(-2, await fd.getPage('https://httpstat.us/403', function() {return 1;}, function() {return -2;}));
+    });
   });
 });
 
