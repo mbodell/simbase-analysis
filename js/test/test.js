@@ -241,6 +241,114 @@ var simbaseIndexPage = `<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitiona
 </td></tr></table>
 </body></html>`;
 
+var simbaseYearIndexPage51 = `<html>
+<body>
+<!-- preface -->
+<table>
+<tr><td><a href='../year50/simbase.html'><< Year 50</a></td><td><a href='../index.html'>League homepage</a></td><td><a href='../year52/simbase.html'>Year 52 >></a></td></tr></table><p>
+<!-- end preface -->
+Year 51 has been completed.
+<ul><li>World Series Champions: Seattle Angst
+<li>Van Landingham Award: Jourdan Dunn (Milan)
+<li>Most Valuable Player: Mark Itabashi (Cyberspace)
+<li>Rookie of the Year: Johan Cruyff (Kratovo)
+</ul><ul><li><a href="standings.html">Standings</a>
+<li><a href="schedule.txt">Schedule</a>
+<li><a href="playoffs.html">Playoffs</a>; Leaders: <a href="playoff-leaders-hit.html">Hitting</a>; <a href="playoff-leaders-pitch.html">Pitching</a>; <a href="playoff-leaders-field.html">Fielding</a>
+<li>Leaders: <a href="leaders-hit.html">Hitting</a>; <a href="leaders-pitch.html">Pitching</a>; <a href="leaders-field.html">Fielding</a>
+<li>Losers: <a href="losers-hit.html">Hitting</a>; <a href="losers-pitch.html">Pitching</a>; <a href="losers-field.html">Fielding</a>
+<li>Sortable Stats: <a href="sortable.html#reg,0">Hitting</a>; <a href="sortable.html#reg,3">Pitching</a>; <a href="sortable.html#reg,7">Fielding</a>
+<li><a href="team_stats.txt">Team Statistics</a>; <a href="pos_avg.txt">Positional Averages</a>; <a href="fielding_splits.txt">Fielding Splits</a> (for multi-position players)
+<li><a href="replayer.html">Game Replayer</a>
+<li><a href="waivers_roster.html">Waiver Wire</a>
+<li><a href="draftpool.txt">Draft Pool</a>
+<li><a href="draft_order.txt">Draft Order</a>
+<li><a href="draftlog.html">Draft Log</a>
+<li><a href="awards.txt">Awards</a>
+<li><a href="allstar_ballot.txt">All-Star Candidates</a>
+<li><a href="roy_ballot.txt">Rookie of the Year Candidates</a>
+<li><a href="hof_ballot.html">Hall of Fame Ballot</a>
+<li><a href="manager_mod.html">Change instructions (for owners)</a>
+<li><a href="names.html">Change names and draft order (for owners)</a>
+</ul><p>MacArthur Division: <ul>
+<li><a href="bullets_home.html">Baltimore Bullets</a>  (Alex Lovejoy, alex dot lovejoy at gmail dot com, 1 moves used): <a href="bullets_roster.html">Roster</a>; <a href="bullets_stats.html">Statistics</a>; <a href="bullets_sched.html">Schedule</a>; <a href="bullets_spring.txt">Spring</a>
+<li><a href="aztecs_home.html">Kratovo Aztecs</a> (Lev Polinsky, polinsky at gmail dot com, 4 moves used): <a href="aztecs_roster.html">Roster</a>; <a href="aztecs_stats.html">Statistics</a>; <a href="aztecs_sched.html">Schedule</a>; <a href="aztecs_spring.txt">Spring</a>; <a href="aztecs_playoff_stats.html">Playoffs</a>
+<li><a href="magicians_home.html">Multiverse Magicians</a>  (Solomon Stein, solomon dot stein at gmail dot com, 7 moves used): <a href="magicians_roster.html">Roster</a>; <a href="magicians_stats.html">Statistics</a>; <a href="magicians_sched.html">Schedule</a>; <a href="magicians_spring.txt">Spring</a>
+<li><a href="sprites_home.html">San Jose Sprites</a> (David Scotton, dscotton at gmail dot com, 1 moves used): <a href="sprites_roster.html">Roster</a>; <a href="sprites_stats.html">Statistics</a>; <a href="sprites_sched.html">Schedule</a>; <a href="sprites_spring.txt">Spring</a>; <a href="sprites_playoff_stats.html">Playoffs</a>
+<li><a href="southpaws_home.html">Sao Paulo Southpaws</a>  (Chad Davis, chadalandavis at gmail dot com, 5 moves used): <a href="southpaws_roster.html">Roster</a>; <a href="southpaws_stats.html">Statistics</a>; <a href="southpaws_sched.html">Schedule</a>; <a href="southpaws_spring.txt">Spring</a>
+<li><a href="angst_home.html">Seattle Angst</a> (Mike Develin, mdevelin at gmail dot com, 7 moves used): <a href="angst_roster.html">Roster</a>; <a href="angst_stats.html">Statistics</a>; <a href="angst_sched.html">Schedule</a>; <a href="angst_spring.txt">Spring</a>; <a href="angst_playoff_stats.html">Playoffs</a>
+<li><a href="players_home.html">Stratford Players</a>  (Joon Pahk, joonpahk at gmail dot com, 3 moves used): <a href="players_roster.html">Roster</a>; <a href="players_stats.html">Statistics</a>; <a href="players_sched.html">Schedule</a>; <a href="players_spring.txt">Spring</a>
+<li><a href="gridlock_home.html">Washington Gridlock</a>  (Steve Bahnaman, stevebahnaman at gmail dot com, 1 moves used): <a href="gridlock_roster.html">Roster</a>; <a href="gridlock_stats.html">Statistics</a>; <a href="gridlock_sched.html">Schedule</a>; <a href="gridlock_spring.txt">Spring</a>
+</ul>
+<p>Thor Division: <ul>
+<li><a href="almosts_home.html">Almaty Almosts</a>  (Eric Mayefsky, bobbyoderek at gmail dot com, 0 moves used): <a href="almosts_roster.html">Roster</a>; <a href="almosts_stats.html">Statistics</a>; <a href="almosts_sched.html">Schedule</a>; <a href="almosts_spring.txt">Spring</a>
+<li><a href="rappers_home.html">Compton Rappers</a> (Nathan Kaplan, nathanckaplan at gmail dot com, 7 moves used): <a href="rappers_roster.html">Roster</a>; <a href="rappers_stats.html">Statistics</a>; <a href="rappers_sched.html">Schedule</a>; <a href="rappers_spring.txt">Spring</a>; <a href="rappers_playoff_stats.html">Playoffs</a>
+<li><a href="internet_home.html">Cyberspace Internet</a> (Michael Bodell, mbodell at gmail dot com, 7 moves used): <a href="internet_roster.html">Roster</a>; <a href="internet_stats.html">Statistics</a>; <a href="internet_sched.html">Schedule</a>; <a href="internet_spring.txt">Spring</a>; <a href="internet_playoff_stats.html">Playoffs</a>
+<li><a href="chefs_home.html">Kansas City Chefs</a>  (Bobby Woods-Corwin, simbase at rwoodsco dot fastmail dot fm, 2 moves used): <a href="chefs_roster.html">Roster</a>; <a href="chefs_stats.html">Statistics</a>; <a href="chefs_sched.html">Schedule</a>; <a href="chefs_spring.txt">Spring</a>
+<li><a href="tracks_home.html">Los Angeles Laugh Tracks</a>  (Matt Bruce, matt at naqt dot com, 4 moves used): <a href="tracks_roster.html">Roster</a>; <a href="tracks_stats.html">Statistics</a>; <a href="tracks_sched.html">Schedule</a>; <a href="tracks_spring.txt">Spring</a>
+<li><a href="models_home.html">Milan Models</a> (Paul Lujan, plujan314 at gmail dot com, 6 moves used): <a href="models_roster.html">Roster</a>; <a href="models_stats.html">Statistics</a>; <a href="models_sched.html">Schedule</a>; <a href="models_spring.txt">Spring</a>; <a href="models_playoff_stats.html">Playoffs</a>
+<li><a href="bears_home.html">Paddington Bears</a>  (Alex Saltman, saltman at gmail dot com, 4 moves used): <a href="bears_roster.html">Roster</a>; <a href="bears_stats.html">Statistics</a>; <a href="bears_sched.html">Schedule</a>; <a href="bears_spring.txt">Spring</a>
+<li><a href="felidae_home.html">Philadelphia Felidae</a>  (Victor Chubukov, victor dot chubukov at gmail dot com, 1 moves used): <a href="felidae_roster.html">Roster</a>; <a href="felidae_stats.html">Statistics</a>; <a href="felidae_sched.html">Schedule</a>; <a href="felidae_spring.txt">Spring</a>
+</ul>
+<a href="../index.html">Back to simbasev3 main page</a>
+</body></html>`;
+
+var simbaseYearIndexPage81 = `<html>
+<body>
+<!-- preface -->
+<table>
+<tr><td><a href='../year80/simbase.html'><< Year 80</a></td><td><a href='../index.html'>League homepage</a></td><td><a href='../year82/simbase.html'>Year 82 >></a></td></tr></table><p>
+<!-- end preface -->
+Year 81 has been completed.
+<ul><li>World Series Champions: Baltimore Bullets
+<li>Van Landingham Award: David (Circus)
+<li>Most Valuable Player: Hugo S?nchez M?rquez (Kratovo)
+<li>Rookie of the Year: Cow Jumping Over the Moon (Paddington)
+</ul><ul><li><a href="standings.html">Standings</a>
+<li><a href="schedule.txt">Schedule</a>
+<li><a href="playoffs.html">Playoffs</a>; Leaders: <a href="playoff-leaders-hit.html">Hitting</a>; <a href="playoff-leaders-pitch.html">Pitching</a>; <a href="playoff-leaders-field.html">Fielding</a>
+<li>Leaders: <a href="leaders-hit.html">Hitting</a>; <a href="leaders-pitch.html">Pitching</a>; <a href="leaders-field.html">Fielding</a>
+<li>Losers: <a href="losers-hit.html">Hitting</a>; <a href="losers-pitch.html">Pitching</a>; <a href="losers-field.html">Fielding</a>
+<li>Sortable Stats: <a href="sortable.html#reg,0">Hitting</a>; <a href="sortable.html#reg,3">Pitching</a>; <a href="sortable.html#reg,7">Fielding</a>
+<li><a href="team_stats.txt">Team Statistics</a>; <a href="pos_avg.txt">Positional Averages</a>; <a href="fielding_splits.txt">Fielding Splits</a> (for multi-position players)
+<li><a href="replayer.html">Game Replayer</a>
+<li><a href="waivers_roster.html">Waiver Wire</a>
+<li><a href="draftpool.txt">Draft Pool</a>
+<li><a href="draft_order.txt">Draft Order</a>
+<li><a href="draftlog.html">Draft Log</a>
+<li><a href="awards.txt">Awards</a>
+<li><a href="allstar_ballot.txt">All-Star Candidates</a>
+<li><a href="roy_ballot.txt">Rookie of the Year Candidates</a>
+<li><a href="hof_ballot.html">Hall of Fame Ballot</a>
+<li><a href="manager_mod.html">Change instructions (for owners)</a>
+<li><a href="names.html">Change names and draft order (for owners)</a>
+</ul><p>East Division: <ul>
+<li><a href="oldones_home.html">Arkham Old Ones</a>  (Geoff Smith, geoff127 at gmail dot com, 3 moves used): <a href="oldones_roster.html">Roster</a>; <a href="oldones_stats.html">Statistics</a>; <a href="oldones_sched.html">Schedule</a>; <a href="oldones_spring.txt">Spring</a>
+<li><a href="avangard_home.html">Avangard Omsk</a>  (Bobby Woods-Corwin, simbase at rwoodsco dot fastmail dot fm, 0 moves used): <a href="avangard_roster.html">Roster</a>; <a href="avangard_stats.html">Statistics</a>; <a href="avangard_sched.html">Schedule</a>; <a href="avangard_spring.txt">Spring</a>
+<li><a href="bullets_home.html">Baltimore Bullets</a> (Alex Lovejoy, alex dot lovejoy at gmail dot com, 1 moves used): <a href="bullets_roster.html">Roster</a>; <a href="bullets_stats.html">Statistics</a>; <a href="bullets_sched.html">Schedule</a>; <a href="bullets_spring.txt">Spring</a>; <a href="bullets_playoff_stats.html">Playoffs</a>
+<li><a href="blizzard_home.html">Columbus Blizzard</a>  (Tony Lefeld, alefeld at alumni dot nd dot edu, 0 moves used): <a href="blizzard_roster.html">Roster</a>; <a href="blizzard_stats.html">Statistics</a>; <a href="blizzard_sched.html">Schedule</a>; <a href="blizzard_spring.txt">Spring</a>
+<li><a href="magicians_home.html">Multiverse Magicians</a>  (Solomon Stein, solomon dot stein at gmail dot com, 4 moves used): <a href="magicians_roster.html">Roster</a>; <a href="magicians_stats.html">Statistics</a>; <a href="magicians_sched.html">Schedule</a>; <a href="magicians_spring.txt">Spring</a>
+<li><a href="southpaws_home.html">Sao Paulo Southpaws</a>  (Chad Davis, chadalandavis at gmail dot com, 2 moves used): <a href="southpaws_roster.html">Roster</a>; <a href="southpaws_stats.html">Statistics</a>; <a href="southpaws_sched.html">Schedule</a>; <a href="southpaws_spring.txt">Spring</a>
+</ul>
+<p>Eurasian Division: <ul>
+<li><a href="circus_home.html">Flying Circus</a> (Igor Teper, iteper at gmail dot com, 9 moves used): <a href="circus_roster.html">Roster</a>; <a href="circus_stats.html">Statistics</a>; <a href="circus_sched.html">Schedule</a>; <a href="circus_spring.txt">Spring</a>; <a href="circus_playoff_stats.html">Playoffs</a>
+<li><a href="aztecs_home.html">Kratovo Aztecs</a> (Lev Polinsky, polinsky at gmail dot com, 3 moves used): <a href="aztecs_roster.html">Roster</a>; <a href="aztecs_stats.html">Statistics</a>; <a href="aztecs_sched.html">Schedule</a>; <a href="aztecs_spring.txt">Spring</a>; <a href="aztecs_playoff_stats.html">Playoffs</a>
+<li><a href="models_home.html">Milan Models</a>  (Paul Lujan, plujan314 at gmail dot com, 2 moves used): <a href="models_roster.html">Roster</a>; <a href="models_stats.html">Statistics</a>; <a href="models_sched.html">Schedule</a>; <a href="models_spring.txt">Spring</a>
+<li><a href="bears_home.html">Paddington Bears</a>  (Alex Saltman, saltman at gmail dot com, 2 moves used): <a href="bears_roster.html">Roster</a>; <a href="bears_stats.html">Statistics</a>; <a href="bears_sched.html">Schedule</a>; <a href="bears_spring.txt">Spring</a>
+<li><a href="players_home.html">Stratford Players</a>  (Joon Pahk, joonpahk at gmail dot com, 5 moves used): <a href="players_roster.html">Roster</a>; <a href="players_stats.html">Statistics</a>; <a href="players_sched.html">Schedule</a>; <a href="players_spring.txt">Spring</a>
+<li><a href="tribe_home.html">Tel Aviv Tribe</a> (Laser Kaplan, laserkaplan at gmail dot com, 5 moves used): <a href="tribe_roster.html">Roster</a>; <a href="tribe_stats.html">Statistics</a>; <a href="tribe_sched.html">Schedule</a>; <a href="tribe_spring.txt">Spring</a>; <a href="tribe_playoff_stats.html">Playoffs</a>
+</ul>
+<p>West Division: <ul>
+<li><a href="rappers_home.html">Compton Rappers</a> (Nathan Kaplan, nathanckaplan at gmail dot com, 6 moves used): <a href="rappers_roster.html">Roster</a>; <a href="rappers_stats.html">Statistics</a>; <a href="rappers_sched.html">Schedule</a>; <a href="rappers_spring.txt">Spring</a>; <a href="rappers_playoff_stats.html">Playoffs</a>
+<li><a href="internet_home.html">Cyberspace Internet</a>  (Michael Bodell, mbodell at gmail dot com, 3 moves used): <a href="internet_roster.html">Roster</a>; <a href="internet_stats.html">Statistics</a>; <a href="internet_sched.html">Schedule</a>; <a href="internet_spring.txt">Spring</a>
+<li><a href="stars_home.html">Hollywoo Stars and Celebrities</a>  (None, none, 4 moves used): <a href="stars_roster.html">Roster</a>; <a href="stars_stats.html">Statistics</a>; <a href="stars_sched.html">Schedule</a>; <a href="stars_spring.txt">Spring</a>
+<li><a href="tracks_home.html">Los Angeles Laugh Tracks</a>  (Matt Bruce, matt dot bruce at gmail dot com, 5 moves used): <a href="tracks_roster.html">Roster</a>; <a href="tracks_stats.html">Statistics</a>; <a href="tracks_sched.html">Schedule</a>; <a href="tracks_spring.txt">Spring</a>
+<li><a href="sexwales_home.html">San Jose Sexwales</a> (David Scotton, dscotton at gmail dot com, 3 moves used): <a href="sexwales_roster.html">Roster</a>; <a href="sexwales_stats.html">Statistics</a>; <a href="sexwales_sched.html">Schedule</a>; <a href="sexwales_spring.txt">Spring</a>; <a href="sexwales_playoff_stats.html">Playoffs</a>
+<li><a href="angst_home.html">Seattle Angst</a>  (Mike Develin, mdevelin at gmail dot com, 6 moves used): <a href="angst_roster.html">Roster</a>; <a href="angst_stats.html">Statistics</a>; <a href="angst_sched.html">Schedule</a>; <a href="angst_spring.txt">Spring</a>
+</ul>
+<a href="../index.html">Back to simbasev3 main page</a>
+</body></html>`;
+
 // And tests for a group of tests on parsing data
 describe('Data Parsing', function() {
   describe('tests parsing simbase main index page', function() {
@@ -262,6 +370,30 @@ describe('Data Parsing', function() {
     it('Able to parse the team history links and first one is right', async function() {
       let doc = await pd.parseIndexPage(simbaseIndexPage);
       assert.equal('avangard_history.html', doc.teamHistoryLinks[0]);
+    });
+    
+    it('Able to parse the 82 years of simbase', async function() {
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
+      assert.equal(82, doc.yearLinks.length);
+    });
+
+    it('Able to tell that the 4th year is in the right place', async function() {
+      let doc = await pd.parseIndexPage(simbaseIndexPage);
+      assert.equal('year4/simbase.html', doc.yearLinks[3]);
+    });
+  });
+
+  describe('tests parsing simbase year index page', function() {
+    it('Able to parse the spring links for year 51 and first of 16 links is bullets_spring.txt', async function() {
+      let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+      assert.equal('bullets_spring.txt', doc.springLinks[0]);
+      assert.equal(16, doc.springLinks.length);
+    });
+
+    it('Able to parse the spring links for year 81 and first 18 links is oldones_spring.txt', async function() {
+      let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+      assert.equal('oldones_spring.txt', doc.springLinks[0]);
+      assert.equal(18, doc.springLinks.length);
     });
   });
 });
