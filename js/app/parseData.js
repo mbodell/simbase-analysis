@@ -31,6 +31,42 @@ parseData.parseIndexPage = function(data, cb) {
 
 parseData.parseYearIndexPage = function(data, cb) {
   let page = h2j.parse(data, {
+    'homeLinks': function($doc) {
+      const homeLinks = [];
+      $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
+        if(el.attribs.href.indexOf("home") > 0) {
+          homeLinks.push(el.attribs.href); 
+        } 
+      });
+      return homeLinks;
+    },
+    'rosterLinks': function($doc) {
+      const rosterLinks = [];
+      $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
+        if(el.children[0].data === "Roster") {
+          rosterLinks.push(el.attribs.href); 
+        } 
+      });
+      return rosterLinks;
+    },
+    'statsLinks': function($doc) {
+      const statsLinks = [];
+      $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
+        if(el.children[0].data === "Statistics") {
+          statsLinks.push(el.attribs.href); 
+        } 
+      });
+      return statsLinks;
+    },
+    'schedLinks': function($doc) {
+      const schedLinks = [];
+      $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
+        if(el.attribs.href.indexOf("_sched.") > 0) {
+          schedLinks.push(el.attribs.href); 
+        } 
+      });
+      return schedLinks;
+    },
     'springLinks': function($doc) {
       const springLinks = [];
       $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
@@ -39,6 +75,15 @@ parseData.parseYearIndexPage = function(data, cb) {
         } 
       });
       return springLinks;
+    },
+    'teamPlayoffLinks': function($doc) {
+      const teamPlayoffLinks = [];
+      $doc.find('ul').slice(2).find('li').children('a').each(function(i, el) {
+        if(el.attribs.href.indexOf("_playoff_stats.") > 0) {
+          teamPlayoffLinks.push(el.attribs.href); 
+        } 
+      });
+      return teamPlayoffLinks;
     }
   }, cb);
   return page;

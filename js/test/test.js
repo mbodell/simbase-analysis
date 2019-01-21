@@ -384,16 +384,70 @@ describe('Data Parsing', function() {
   });
 
   describe('tests parsing simbase year index page', function() {
-    it('Able to parse the spring links for year 51 and first of 16 links is bullets_spring.txt', async function() {
-      let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
-      assert.equal('bullets_spring.txt', doc.springLinks[0]);
-      assert.equal(16, doc.springLinks.length);
+    describe('Year 51 tests', function() {
+      it('Able to parse the home links and first of 16 links is bullets_home.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('bullets_home.html', doc.homeLinks[0]);
+        assert.equal(16, doc.homeLinks.length);
+      });
+      it('Able to parse the roster links and first of 16 links is bullets_roster.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('bullets_roster.html', doc.rosterLinks[0]);
+        assert.equal(16, doc.rosterLinks.length);
+      });
+      it('Able to parse the stats links and first of 16 links is bullets_stats.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('bullets_stats.html', doc.statsLinks[0]);
+        assert.equal(16, doc.statsLinks.length);
+      });
+      it('Able to parse the schedule links and first of 16 links is bullets_sched.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('bullets_sched.html', doc.schedLinks[0]);
+        assert.equal(16, doc.schedLinks.length);
+      });
+      it('Able to parse the spring links and first of 16 links is bullets_spring.txt', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('bullets_spring.txt', doc.springLinks[0]);
+        assert.equal(16, doc.springLinks.length);
+      });
+      it('Able to parse the playoff links and first of 6 links is aztec_playoff_stats.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage51);
+        assert.equal('aztecs_playoff_stats.html', doc.teamPlayoffLinks[0]);
+        assert.equal(6, doc.teamPlayoffLinks.length);
+      });
     });
 
-    it('Able to parse the spring links for year 81 and first 18 links is oldones_spring.txt', async function() {
-      let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
-      assert.equal('oldones_spring.txt', doc.springLinks[0]);
-      assert.equal(18, doc.springLinks.length);
+    describe('Tests parsing year 81', function() {
+      it('Able to parse the home links and first of 18 links is oldones_home.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('oldones_home.html', doc.homeLinks[0]);
+        assert.equal(18, doc.homeLinks.length);
+      });
+      it('Able to parse the roster links and first of 18 links is oldones_roster.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('oldones_roster.html', doc.rosterLinks[0]);
+        assert.equal(18, doc.rosterLinks.length);
+      });
+      it('Able to parse the stats links and first of 18 links is oldones_stats.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('oldones_stats.html', doc.statsLinks[0]);
+        assert.equal(18, doc.statsLinks.length);
+      });
+      it('Able to parse the schedule links and first of 18 links is oldones_sched.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('oldones_sched.html', doc.schedLinks[0]);
+        assert.equal(18, doc.schedLinks.length);
+      });
+      it('Able to parse the spring links and first of 18 links is oldones_spring.txt', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('oldones_spring.txt', doc.springLinks[0]);
+        assert.equal(18, doc.springLinks.length);
+      });
+      it('Able to parse the team playoff links and first of 6 links is bullets_playoff_stats.html', async function() {
+        let doc = await pd.parseYearIndexPage(simbaseYearIndexPage81);
+        assert.equal('bullets_playoff_stats.html', doc.teamPlayoffLinks[0]);
+        assert.equal(6, doc.teamPlayoffLinks.length);
+      });
     });
   });
 });
