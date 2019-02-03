@@ -2,6 +2,7 @@
 const assert = require('assert');
 const fd = require('../app/fetchData');
 const pd = require('../app/parseData');
+const sdb = require('../app/simbaseDatabase');
 
 var err = function(error, results) {
   console.log(error);
@@ -448,6 +449,31 @@ describe('Data Parsing', function() {
         assert.equal('bullets_playoff_stats.html', doc.teamPlayoffLinks[0]);
         assert.equal(6, doc.teamPlayoffLinks.length);
       });
+    });
+  });
+});
+
+describe('Data Base Manipulation', function() {
+  describe('Basic connection and disconection tests', function() {
+    it('Able to connect and disconnect to db', async function() {
+      let res = await sdb.init();
+      assert.equal(2, res);
+      assert.equal(true, sdb.isConnected());
+      sdb.end();
+      assert.equal(false, sdb.isConnected());
+    });
+    it('Disconnecting from db twice is protected', async function() {
+      let res = await sdb.init();
+      assert.equal(true, sdb.isConnected());
+      sdb.end();
+      assert.equal(false, sdb.isConnected());
+      sdb.end();
+      assert.equal(false, sdb.isConnected());
+    });
+    it('Disconnecting from db without init is protected', async function() {
+      assert.equal(false, sdb.isConnected());
+      sdb.end();
+      assert.equal(false, sdb.isConnected());
     });
   });
 });

@@ -26,6 +26,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "html-to-json": "^0.6.0"
+    "html-to-json": "^0.6.0",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4"
   }
 }
