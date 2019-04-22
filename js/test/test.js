@@ -476,4 +476,18 @@ describe('Data Base Manipulation', function() {
       assert.equal(false, sdb.isConnected());
     });
   });
+  describe('Basic table functionality tests', function() {
+    it('Able to list tables', async function() {
+      let res = await sdb.init();
+      assert.equal(2,res);
+      let tables = await sdb.listTables();
+      assert.equal("testing_players", tables[0]['Tables_in_simbase (%testing%)']);
+      sdb.end();
+      assert.equal(false, sdb.isConnected());
+    });
+    it('Not able to list tables if not connected first', async function() {
+      let tables = await sdb.listTables();
+      assert.equal(undefined, tables);
+    });
+  });
 });

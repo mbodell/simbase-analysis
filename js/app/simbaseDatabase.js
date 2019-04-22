@@ -29,4 +29,13 @@ simbaseDatabase.isConnected = function() {
   return connected;
 }
 
+simbaseDatabase.listTables = async function() {
+  if (connected === true) {
+    const [rows, fields] = await connection.execute('show tables like \'%testing%\';');
+    return rows;
+  } else {
+    return undefined;
+  }
+}
+
 module.exports = simbaseDatabase;
