@@ -350,6 +350,40 @@ Year 81 has been completed.
 <a href="../index.html">Back to simbasev3 main page</a>
 </body></html>`;
 
+var sampleSpringPage = `PO    ID            Name    BA   OBP   SLG   OPS Age Spd Def Arm  PA
+ c  7328       J Gilmore 0.292 0.370 0.551 0.921  28  AV  AV  FR 100
+1b  7677 KD Habersberger 0.294 0.400 0.388 0.788  23  PR  PR  FR 100
+2b  7770          F Wong 0.323 0.350 0.438 0.787  21  EX  VG  AV 100
+3b  7123       M Laurent 0.333 0.400 0.622 1.022  27  FR  VG  FR 100
+3b  7549     daviddobrik 0.261 0.350 0.591 0.941  23  AV  AV  VG 100
+3b  8010        nala_cat 0.167 0.200 0.208 0.408  19  VG  VG  FR 100
+ss  7759         Janitor 0.292 0.370 0.506 0.876  23  AV  AV  AV 100
+ss  7889    TH Hightower 0.311 0.380 0.400 0.780  21  VG  VG  FR 100
+ss  7724            Zach 0.281 0.310 0.396 0.706  22  EX  VG  VG 100
+ss  6970          BW Man 0.212 0.330 0.294 0.624  28  EX  VG  AV 100
+ss  8092        Scarlxrd 0.206 0.230 0.330 0.560  19  FR  FR  AV 100
+lf  7212      C Peterson 0.470 0.560 0.723 1.283  29  EX  EX  AV 100
+lf  7864        B Rogers 0.337 0.390 0.446 0.836  21  VG  AV  FR 100
+cf  7708         EL Yang 0.289 0.310 0.536 0.846  21  PR  FR  EX 100
+cf  7991    jamescharles 0.204 0.260 0.409 0.669  19  PR  PR  AV 100
+cf  7243        M Drudge 0.247 0.360 0.306 0.666  25  AV  PR  AV 100
+cf  8071 oneredpaperclip 0.216 0.240 0.392 0.632  17  AV  PR  AV 100
+rf  7004     The Oatmeal 0.362 0.400 0.617 1.017  29  VG  AV  FR 100
+rf  8076         Dr Mike 0.308 0.370 0.407 0.777  20  EX  VG  AV 100
+rf  7768          J Wong 0.261 0.320 0.359 0.679  20  VG  FR  VG 100
+rf  7969           Ninja 0.122 0.140 0.163 0.303  18  AV  VG  EX 100
+PO    ID            Name    BA   OBP   SLG   OPS Age  GB  FB  LD  PA
+sp  6780           Harto 0.278 0.300 0.371 0.671  31  AV  HI  LO 100
+sp  7283       C Neistat 0.278 0.300 0.423 0.723  29  AV  AV  AV 100
+sp  7075          KuroKy 0.323 0.350 0.417 0.767  30  HI  LO  LO 100
+sp  7543  ElleOfTheMills 0.379 0.410 0.547 0.957  22  LO  AV  HI 100
+sp  8043        M Butler 0.376 0.470 0.600 1.070  17  AV  AV  HI 100
+rp  7059  jacobsartorius 0.146 0.240 0.169 0.409  30  HI  AV  LO 100
+rp  7411           S Lim 0.250 0.280 0.396 0.676  26  AV  HI  LO 100
+rp  7454      A Ilnyckyj 0.207 0.270 0.435 0.705  25  AV  LO  AV 100
+rp  7099        M Ramsey 0.220 0.290 0.462 0.752  28  AV  HI  LO 100
+rp  7669             Ned 0.286 0.350 0.538 0.888  24  AV  HI  AV 100`;
+
 // And tests for a group of tests on parsing data
 describe('Data Parsing', function() {
   describe('tests parsing simbase main index page', function() {
@@ -449,6 +483,73 @@ describe('Data Parsing', function() {
         assert.equal('bullets_playoff_stats.html', doc.teamPlayoffLinks[0]);
         assert.equal(6, doc.teamPlayoffLinks.length);
       });
+    });
+
+    describe('Tests parsing spring page', function() {
+			it('Able to parse the sample spring page with 31 players', async function() {
+				let spring = await pd.parseSpringPage(sampleSpringPage, err);
+				assert.equal(31,spring.length);
+			});
+			it('Able to parse the sample spring page and J Gilmore parses correctly', async function() {
+				let spring = await pd.parseSpringPage(sampleSpringPage, err);
+				assert.equal('c',spring[0].pos);
+				assert.equal('7328',spring[0].id);
+				assert.equal('J Gilmore',spring[0].name);
+				assert.equal('0.292',spring[0].ba);
+				assert.equal('0.370',spring[0].obp);
+				assert.equal('0.551',spring[0].slg);
+				assert.equal('0.921',spring[0].ops);
+				assert.equal('28',spring[0].age);
+				assert.equal('AV',spring[0].spd);
+				assert.equal('AV',spring[0].def);
+				assert.equal('FR',spring[0].arm);
+				assert.equal('100',spring[0].pa);
+			});
+			it('Able to parse the sample spring page and Ned parses correctly', async function() {
+				let spring = await pd.parseSpringPage(sampleSpringPage, err);
+				assert.equal('rp',spring[30].pos);
+				assert.equal('7669',spring[30].id);
+				assert.equal('Ned',spring[30].name);
+				assert.equal('0.286',spring[30].ba);
+				assert.equal('0.350',spring[30].obp);
+				assert.equal('0.538',spring[30].slg);
+				assert.equal('0.888',spring[30].ops);
+				assert.equal('24',spring[30].age);
+				assert.equal('AV',spring[30].gb);
+				assert.equal('HI',spring[30].fb);
+				assert.equal('AV',spring[30].ld);
+				assert.equal('100',spring[30].pa);
+			});
+			it('Able to parse the sample spring page and reference Keith from the hitters correctly', async function() {
+				let spring = await pd.parseSpringPage(sampleSpringPage, err);
+				assert.equal('1b',spring.hitters[1].pos);
+				assert.equal('7677',spring.hitters[1].id);
+				assert.equal('KD Habersberger',spring.hitters[1].name);
+				assert.equal('0.294',spring.hitters[1].ba);
+				assert.equal('0.400',spring.hitters[1].obp);
+				assert.equal('0.388',spring.hitters[1].slg);
+				assert.equal('0.788',spring.hitters[1].ops);
+				assert.equal('23',spring.hitters[1].age);
+				assert.equal('PR',spring.hitters[1].spd);
+				assert.equal('PR',spring.hitters[1].def);
+				assert.equal('FR',spring.hitters[1].arm);
+				assert.equal('100',spring.hitters[1].pa);
+			});
+			it('Able to parse the sample spring page and reference Harto from the pitchers correctly', async function() {
+				let spring = await pd.parseSpringPage(sampleSpringPage, err);
+				assert.equal('sp',spring.pitchers[0].pos);
+				assert.equal('6780',spring.pitchers[0].id);
+				assert.equal('Harto',spring.pitchers[0].name);
+				assert.equal('0.278',spring.pitchers[0].ba);
+				assert.equal('0.300',spring.pitchers[0].obp);
+				assert.equal('0.371',spring.pitchers[0].slg);
+				assert.equal('0.671',spring.pitchers[0].ops);
+				assert.equal('31',spring.pitchers[0].age);
+				assert.equal('AV',spring.pitchers[0].gb);
+				assert.equal('HI',spring.pitchers[0].fb);
+				assert.equal('LO',spring.pitchers[0].ld);
+				assert.equal('100',spring.pitchers[0].pa);
+			});
     });
   });
 });

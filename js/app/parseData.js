@@ -89,4 +89,48 @@ parseData.parseYearIndexPage = function(data, cb) {
   return page;
 };
 
+parseData.parseSpringPage = function(data, cb) {
+  var lines = data.split("\n");
+	var players = [];
+	players.hitters = [];
+	players.pitchers = [];
+	var state = 0;
+	lines.forEach(function(line, index) {
+		if(index === 0) {
+			state++;
+		} else {
+			var pos = line.slice(0,2).trim();
+			var id = line.slice(4,8);
+			var name = line.slice(9,24).trim();
+			var ba = line.slice(25,30);
+			var obp = line.slice(31,36);
+			var slg = line.slice(37,42);
+			var ops = line.slice(43,48);
+			var age = line.slice(50,52);
+			var spd = line.slice(54,56);
+			var def = line.slice(58,60);
+			var arm = line.slice(62,64);
+			var pa = line.slice(65,68);
+			if (pos === "PO") {
+				state++;
+			} else if (state === 1) {
+				players.push({"pos": pos, "id": id, "name": name, "ba": ba,
+					"obp": obp, "slg": slg, "ops": ops, "age": age, "pa": pa,
+					"spd": spd, "arm": arm, "def": def})
+				players.hitters.push({"pos": pos, "id": id, "name": name, "ba": ba,
+					"obp": obp, "slg": slg, "ops": ops, "age": age, "pa": pa,
+					"spd": spd, "arm": arm, "def": def})
+			} else {
+				players.push({"pos": pos, "id": id, "name": name, "ba": ba,
+					"obp": obp, "slg": slg, "ops": ops, "age": age, "pa": pa,
+					"gb": spd, "fb": def, "ld": arm})
+				players.pitchers.push({"pos": pos, "id": id, "name": name, "ba": ba,
+					"obp": obp, "slg": slg, "ops": ops, "age": age, "pa": pa,
+					"gb": spd, "fb": def, "ld": arm})
+			}
+		}
+	});
+	return players;
+}
+
 module.exports = parseData;
