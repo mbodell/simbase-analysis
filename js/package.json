@@ -25,7 +25,7 @@
     "nyc": "^14.1.1"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "html-to-json": "^0.6.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.4"
